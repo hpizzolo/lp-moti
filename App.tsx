@@ -163,7 +163,7 @@ const App: React.FC = () => {
                       <div className="text-white text-[9px] font-bold uppercase tracking-[0.2em] mb-3">Experiência na área</div>
                       <div className="text-3xl font-black text-white mb-4">+ 30 Anos</div>
                       <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                        <div className="h-full bg-green-500 w-[100%] shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
+                        <div className="h-full bg-[#fa3a40] w-[100%] shadow-[0_0_10px_rgba(250,58,64,0.5)]"></div>
                       </div>
                     </div>
                   </div>
