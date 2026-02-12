@@ -94,17 +94,17 @@ const App: React.FC = () => {
             {/* Left Content */}
             <div className="lg:w-[55%] text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/40 text-[9px] font-bold uppercase tracking-[0.2em] mb-10">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#fa3a40]" /> Compliance Estratégico 2026
+                <ShieldCheck className="w-3.5 h-3.5 text-[#fa3a40]" /> Motí EAD
               </div>
 
               <h1 className="text-5xl md:text-[80px] font-extrabold text-white leading-[1.05] mb-10 tracking-tight">
                 Segurança para <br className="hidden md:block" />
-                Cooperativas, <br />
+                Instituições Financeiras, <br />
                 <span className="text-[#fa3a40]">Evolução para <br className="hidden md:block" /> Profissionais.</span>
               </h1>
 
               <p className="text-lg md:text-xl text-white/40 mb-14 max-w-xl leading-relaxed">
-                A blindagem regulatória que sua cooperativa precisa e a certificação prática que o mercado de trabalho exige. O Motí EAD une gestão de riscos e crescimento de carreira.
+                A blindagem regulatória que sua instituição financeira precisa e a certificação prática que o mercado de trabalho exige: conheça o <strong className="text-white">Motí EAD</strong>.
               </p>
 
               <div className="flex flex-row flex-wrap items-center gap-5 mb-20">
@@ -113,7 +113,7 @@ const App: React.FC = () => {
                   className="bg-[#fa3a40] text-white px-9 py-5 rounded-full font-black text-xs hover:brightness-110 active:scale-95 transition-all shadow-[0_15px_40px_rgba(250,58,64,0.35)] flex items-center justify-center gap-3 uppercase tracking-[0.15em]"
                 >
                   <ShieldCheck className="w-5 h-5 flex-shrink-0" />
-                  SOU LÍDER DE COOPERATIVA
+                  SOU LÍDER DE INSTITUIÇÃO
                 </button>
                 <button
                   onClick={() => scrollTo('carreira')}
@@ -194,165 +194,81 @@ const App: React.FC = () => {
       <section id="pilares" className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#283646] mb-4">Os 3 Pilares Inegociáveis</h2>
-            <div className="w-24 h-2 bg-[#fa3a40] mx-auto mb-6"></div>
-            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-              Para 2026, a conformidade não é apenas uma regra, é a segurança do seu patrimônio e reputação.
+            <h2 className="text-4xl md:text-6xl font-extrabold text-[#283646] mb-6 leading-tight">Excelência em Auditoria e Educação</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto text-xl leading-relaxed">
+              Integre sua instituição à plataforma de ensino que automatiza a certificação e facilita o monitoramento de progresso das equipes.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {PILLARS.map((pillar) => (
               <div key={pillar.id} className="group p-8 rounded-2xl border-2 border-gray-50 hover:border-[#bdcfd9] hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center">
                 <div className="mb-6 p-4 rounded-full bg-[#fa3a40]/5 group-hover:bg-[#fa3a40]/10 transition">
                   {pillar.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-[#283646] min-h-[60px] flex items-center">{pillar.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-8">
+                <h3 className="text-lg font-bold mb-4 text-[#283646] min-h-[50px] flex items-center leading-tight">{pillar.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-8">
                   {pillar.description}
                 </p>
-                <div className="mt-auto">
-                  <button
-                    onClick={() => scrollTo('budget')}
-                    className="text-[#fa3a40] font-bold inline-flex items-center gap-2 group-hover:gap-3 transition-all cursor-pointer"
-                  >
-                    Saiba mais <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <button
-              onClick={() => scrollTo('relatorio')}
-              className="bg-[#283646] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#fa3a40] transition-colors shadow-lg"
-            >
-              Veja como o Motí EAD Facilita Tudo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Dashboard Section */}
-      <section id="relatorio" className="py-24 px-6 md:px-12 bg-[#bdcfd9]/20">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-          <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#283646] mb-6 leading-tight">
-              Facilite seu <span className="text-[#fa3a40]">Relatório de Efetividade</span> com o Motí EAD.
-            </h2>
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              O "Relatório de Efetividade" costuma ser um pesadelo logístico. Nossa plataforma simplifica este processo em até 80%, consolidando dados críticos de forma automática.
-            </p>
-
-            <div className="space-y-4 mb-8">
-              {[
-                "Adesão total em tempo real por departamento",
-                "Notas e desempenho consolidados por colaborador",
-                "Cronologia histórica de treinamentos à prova de auditorias",
-                "Exportação simplificada para Conselho e BCB"
-              ].map((benefit, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="mt-1 bg-green-100 p-1 rounded-full">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
-                  </div>
-                  <span className="text-[#283646] font-semibold">{benefit}</span>
-                </div>
-              ))}
-            </div>
-
+          <div className="mt-20 text-center">
             <button
               onClick={() => scrollTo('budget')}
-              className="bg-[#fa3a40] text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition shadow-xl"
+              className="bg-[#fa3a40] text-white px-10 py-5 rounded-2xl font-black text-sm hover:brightness-110 active:scale-95 transition-all shadow-xl uppercase tracking-widest"
             >
-              Solicitar Demonstração do Painel
+              Solicitar demonstração da plataforma
             </button>
-          </div>
-
-          <div className="lg:w-1/2 w-full">
-            <div className="bg-white p-6 rounded-3xl shadow-2xl border border-gray-100">
-              <div className="flex items-center justify-between mb-8">
-                <h4 className="font-bold text-gray-800">Dashboard de Compliance</h4>
-                <div className="bg-blue-50 text-blue-600 px-3 py-1 rounded-md text-xs font-bold">2026 Ativo</div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-gray-50 p-4 rounded-xl">
-                  <div className="text-gray-400 text-xs font-bold uppercase mb-1">Taxa de Adesão</div>
-                  <div className="text-2xl font-bold text-[#fa3a40]">98.4%</div>
-                </div>
-                <div className="bg-gray-50 p-4 rounded-xl">
-                  <div className="text-gray-400 text-xs font-bold uppercase mb-1">Certificações</div>
-                  <div className="text-2xl font-bold text-[#283646]">1.250+</div>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="relative h-4 w-full bg-gray-100 rounded-full overflow-hidden">
-                  <div className="absolute top-0 left-0 h-full bg-[#fa3a40] w-[90%] rounded-full"></div>
-                </div>
-                <div className="flex justify-between items-center text-sm font-bold text-gray-500">
-                  <span>PLD/CFT Reciclagem</span>
-                  <span className="text-[#fa3a40]">90% Completo</span>
-                </div>
-
-                <div className="relative h-4 w-full bg-gray-100 rounded-full overflow-hidden">
-                  <div className="absolute top-0 left-0 h-full bg-[#6589b2] w-[75%] rounded-full"></div>
-                </div>
-                <div className="flex justify-between items-center text-sm font-bold text-gray-500">
-                  <span>Governança & Riscos</span>
-                  <span className="text-[#6589b2]">75% Completo</span>
-                </div>
-              </div>
-
-              <div className="mt-8 flex justify-center">
-                <div className="p-4 border-2 border-dashed border-gray-200 rounded-xl flex items-center gap-4 text-gray-400">
-                  <BarChart3 className="w-10 h-10" />
-                  <span className="text-sm font-medium">Relatório Exportado com Sucesso!</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
+
 
       {/* SFN & Career Section */}
       <section id="carreira" className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2 order-2 lg:order-1">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-[#6589b2]/5 p-6 rounded-2xl border border-[#6589b2]/10 hover:border-[#6589b2] transition">
-                  <GraduationCap className="w-10 h-10 text-[#6589b2] mb-4" />
-                  <h4 className="font-bold text-lg mb-2">Transição Guiada</h4>
-                  <p className="text-sm text-gray-500">Mentoria para quem vem de outras áreas e busca o setor financeiro.</p>
-                </div>
-                <div className="bg-[#fa3a40]/5 p-6 rounded-2xl border border-[#fa3a40]/10 hover:border-[#fa3a40] transition mt-0 sm:mt-8">
-                  <TrendingUp className="w-10 h-10 text-[#fa3a40] mb-4" />
-                  <h4 className="font-bold text-lg mb-2">Aceleração de Carreira</h4>
-                  <p className="text-sm text-gray-500">Conquiste cargos de liderança com especializações técnicas.</p>
-                </div>
+              <div className="bg-gray-50 rounded-3xl p-8 border-2 border-dashed border-gray-200 flex flex-col items-center text-center justify-center min-h-[400px]">
+                <TrendingUp className="w-16 h-16 text-[#fa3a40]/30 mb-6" />
+                <h3 className="text-2xl font-bold text-[#283646] mb-4">Aceleração de Carreira</h3>
+                <p className="text-gray-500 leading-relaxed max-w-sm">
+                  Desenvolvemos trilhas específicas para quem busca não apenas conformidade, mas uma ascensão real no Sistema Financeiro Nacional.
+                </p>
               </div>
             </div>
             <div className="lg:w-1/2 order-1 lg:order-2">
-              <h2 className="text-3xl md:text-5xl font-extrabold text-[#283646] mb-6">Sua Porta de Entrada para o <span className="text-[#6589b2]">Cooperativismo</span>.</h2>
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Não apenas treinamos equipes, formamos os próximos líderes do Sistema Financeiro Nacional. Se você busca ingressar ou crescer em cooperativas, nossas trilhas de carreira são o caminho mais curto para a sua aprovação.
+              <h2 className="text-3xl md:text-[52px] font-extrabold text-[#283646] mb-8 leading-[1.1]">Sua porta de entrada para o <span className="text-[#6589b2]">mercado financeiro</span>.</h2>
+              <p className="text-gray-600 text-lg mb-10 leading-relaxed">
+                Não apenas treinamos equipes, formamos os próximos líderes do setor. Se você busca ingressar ou crescer no âmbito das instituições financeiras e cooperativismo de crédito, nossos cursos e trilhas de carreira são o caminho certeiro para sua aprovação.
               </p>
-              <div className="space-y-4 mb-8">
-                {CAREER_COURSES.map(course => (
-                  <div key={course.id} className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-transparent hover:border-gray-200 transition">
-                    <div className="text-[#6589b2]">{course.icon}</div>
-                    <span className="font-bold text-[#283646]">{course.title}</span>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+                {COURSES.map(course => (
+                  <div key={course.id} className="p-4 bg-gray-50 border border-transparent rounded-xl hover:border-gray-200 transition-all flex flex-col gap-2 group">
+                    <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-[#283646] group-hover:bg-[#fa3a40] group-hover:text-white transition-all shadow-sm">
+                      {React.cloneElement(course.icon as React.ReactElement, { size: 16 })}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[12px] text-[#283646] leading-tight mb-0.5">{course.title}</h4>
+                      <div className="flex items-center gap-1 text-gray-400 text-[9px] font-bold">
+                        <CheckCircle className="w-2.5 h-2.5 text-green-500" /> Certificado pelo SFN
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
-              <button
-                onClick={() => scrollTo('budget')}
-                className="inline-flex items-center gap-2 font-bold text-[#fa3a40] hover:gap-3 transition-all"
+
+              <a
+                href="https://www.moticonsultoria.com.br/cursos-ead"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 bg-white border-2 border-[#fa3a40] text-[#fa3a40] w-full sm:w-auto px-8 py-5 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-[#fa3a40] hover:text-white transition-all shadow-lg"
               >
-                Conheça o Programa Carreira SFN <ArrowRight className="w-5 h-5" />
-              </button>
+                Conheça os demais cursos e trilhas de carreira <ArrowRight className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
@@ -362,7 +278,7 @@ const App: React.FC = () => {
       <section className="py-24 px-6 md:px-12 bg-white text-[#283646]">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Sua cooperativa está realmente preparada?</h2>
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Sua instituição está realmente preparada?</h2>
             <p className="text-gray-600 text-lg mb-8">
               Faça nosso micro-diagnóstico rápido e descubra se a sua trilha de capacitação atual atende às exigências de 2026.
             </p>
@@ -389,33 +305,10 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Tracks Section */}
-      <section id="trilhas" className="py-24 px-6 md:px-12 bg-gray-50">
+      {/* Improved Contact Form */}
+      <section id="budget" className="py-24 px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#283646] mb-4 leading-tight">Trilhas Completas de Capacitação</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-              Conteúdo especializado desenvolvido por especialistas que vivem o ecossistema das cooperativas brasileiras todos os dias.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {COURSES.map((course) => (
-              <div key={course.id} className="p-8 bg-white border border-transparent rounded-3xl shadow-sm hover:shadow-xl transition-all flex flex-col gap-6 group hover:border-[#fa3a40]/30 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-2 h-full bg-gray-100 group-hover:bg-[#fa3a40] transition-colors"></div>
-                <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-[#283646] group-hover:bg-[#fa3a40] group-hover:text-white transition-all transform group-hover:rotate-6 shadow-sm">
-                  {course.icon}
-                </div>
-                <h4 className="font-bold text-xl text-[#283646] leading-tight">{course.title}</h4>
-                <div className="flex items-center gap-2 text-gray-400 text-sm font-bold">
-                  <CheckCircle className="w-4 h-4 text-green-500" /> Certificado pelo SFN
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Improved Contact Form */}
-          <div id="budget" className="bg-[#283646] p-8 md:p-20 rounded-[48px] shadow-2xl relative overflow-hidden group">
+          <div className="bg-[#283646] p-8 md:p-20 rounded-[48px] shadow-2xl relative overflow-hidden group">
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#fa3a40]/10 rounded-full blur-[100px] group-hover:bg-[#fa3a40]/20 transition-all duration-1000"></div>
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#6589b2]/10 rounded-full blur-[100px]"></div>
 
@@ -424,7 +317,7 @@ const App: React.FC = () => {
                 <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/5 border border-white/10 text-[#fa3a40] text-xs font-bold uppercase tracking-widest mb-4">
                   <Mail className="w-3 h-3" /> Orçamento Sem Compromisso
                 </div>
-                <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">Pronto para blindar sua cooperativa?</h3>
+                <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">Pronto para blindar sua instituição?</h3>
                 <p className="text-[#bdcfd9] text-xl">Nossa equipe entrará em contato em até 1 dia útil.</p>
               </div>
 
@@ -462,14 +355,14 @@ const App: React.FC = () => {
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="joao@cooperativa.com.br"
+                        placeholder="joao@dominio.com.br"
                         className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 pl-14 pr-4 text-white placeholder:text-white/20 focus:bg-white/10 focus:border-[#fa3a40] transition-all outline-none"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-3">
-                    <label className="text-white/60 text-sm font-bold ml-1 uppercase tracking-widest">Cooperativa / Organização</label>
+                    <label className="text-white/60 text-sm font-bold ml-1 uppercase tracking-widest">Instituição / Organização</label>
                     <div className="relative group">
                       <Building2 className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30 group-focus-within:text-[#fa3a40] transition-colors" />
                       <input
@@ -477,7 +370,7 @@ const App: React.FC = () => {
                         type="text"
                         value={formData.cooperativa}
                         onChange={(e) => setFormData({ ...formData, cooperativa: e.target.value })}
-                        placeholder="Nome da sua cooperativa"
+                        placeholder="Nome da sua instituição"
                         className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 pl-14 pr-4 text-white placeholder:text-white/20 focus:bg-white/10 focus:border-[#fa3a40] transition-all outline-none"
                       />
                     </div>

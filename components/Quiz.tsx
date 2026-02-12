@@ -26,7 +26,7 @@ const Quiz: React.FC = () => {
       return (
         <div className="bg-white p-8 rounded-2xl shadow-xl text-center animate-fade-in max-w-xl mx-auto border-t-4 border-green-500">
           <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
-          <h3 className="text-2xl font-bold mb-4">Sua Cooperativa está no caminho certo!</h3>
+          <h3 className="text-2xl font-bold mb-4">Sua Instituição está no caminho certo!</h3>
           <p className="text-gray-600 mb-6 leading-relaxed">
             Parabéns! Sua gestão demonstra um excelente nível de conformidade. No entanto, o cenário de 2026 exige **preparação imediata no Q1** para garantir que você chegue ao Q4 com blindagem total e sem imprevistos de última hora.
           </p>
@@ -43,7 +43,7 @@ const Quiz: React.FC = () => {
     return (
       <div className="bg-white p-8 rounded-2xl shadow-xl text-center animate-fade-in max-w-xl mx-auto border-t-4 border-[#fa3a40]">
         <AlertCircle className="w-16 h-16 text-[#fa3a40] mx-auto mb-4" />
-        <h3 className="text-2xl font-bold mb-4">Sua Cooperativa está em Alerta!</h3>
+        <h3 className="text-2xl font-bold mb-4">Sua Instituição está em Alerta!</h3>
         <p className="text-gray-600 mb-6 leading-relaxed">
           Baseado em suas respostas, existem brechas que podem comprometer sua auditoria em 2026.
           O Motí EAD pode blindar esses pontos críticos em menos de 30 dias.
