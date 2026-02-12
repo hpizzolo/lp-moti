@@ -254,7 +254,7 @@ const App: React.FC = () => {
                     <div>
                       <h4 className="font-bold text-[12px] text-[#283646] leading-tight mb-0.5">{course.title}</h4>
                       <div className="flex items-center gap-1 text-gray-400 text-[9px] font-bold">
-                        <CheckCircle className="w-2.5 h-2.5 text-green-500" /> Certificado pelo SFN
+                        <CheckCircle className="w-2.5 h-2.5 text-green-500" /> Certificado com Base Legal
                       </div>
                     </div>
                   </div>
